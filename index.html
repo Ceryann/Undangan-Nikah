@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Digital — Senja & Naila</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF7A',
+                            light: '#F3E5AB',
+                            dark: '#AA823B',
+                        },
+                        sky: {
+                            soft: '#A8D8F0',
+                            light: '#E6F4FB',
+                        },
+                        cream: '#F5EFE6',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        arabic: ['Amiri', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Style CS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-cream text-slate-800 font-sans antialiased selection:bg-gold selection:text-white overflow-x-hidden">
+
+    <!-- LAYAR 1: COVER OVERLAY FULLSCREEN -->
+    <div id="coverOverlay" class="fixed inset-0 z-50 overflow-hidden pointer-events-auto">
+        <div id="coverDoorLeft" class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-b from-sky-200/90 via-sky-100 to-sky-50 transition-transform duration-1000 ease-in-out border-r border-white/40"></div>
+        <div id="coverDoorRight" class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-b from-sky-200/90 via-sky-100 to-sky-50 transition-transform duration-1000 ease-in-out"></div>
+
+        <div class="absolute top-4 right-4 sm:top-8 sm:right-12 z-10 pointer-events-none flex flex-col items-center">
+            <div class="relative w-28 h-28 sm:w-40 sm:h-40 rounded-full bg-gradient-to-tr from-amber-300 via-yellow-200 to-white shadow-[0_0_80px_rgba(253,224,71,0.8)] animate-pulse-glow flex items-center justify-center">
+                <div class="w-full h-full rounded-full bg-yellow-300/30 blur-xl animate-ping opacity-30"></div>
+            </div>
+        </div>
+
+        <div class="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(circle_at_85%_15%,_rgba(255,255,255,0.7)_0%,_rgba(254,240,138,0.2)_35%,_transparent_70%)]"></div>
+
+        <div class="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+            <div class="absolute top-[15%] left-0 animate-bird-1">
+                <svg class="w-10 h-10 text-slate-700/60" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22 6c-1.5 1.5-3.5 2-5.5 1.5-1.5-.4-3-1.5-4.5-3-1.5 1.5-3 2.6-4.5 3C5.5 8 3.5 7.5 2 6c1.8 3.5 4.5 5 7.5 4.5 2-.3 3.8-1.5 4.5-2.5.7 1 2.5 2.2 4.5 2.5 3 .5 5.7-1 7.5-4.5z"/>
+                </svg>
+            </div>
+            <div class="absolute top-[28%] left-0 animate-bird-2">
+                <svg class="w-8 h-8 text-slate-700/50" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22 6c-1.5 1.5-3.5 2-5.5 1.5-1.5-.4-3-1.5-4.5-3-1.5 1.5-3 2.6-4.5 3C5.5 8 3.5 7.5 2 6c1.8 3.5 4.5 5 7.5 4.5 2-.3 3.8-1.5 4.5-2.5.7 1 2.5 2.2 4.5 2.5 3 .5 5.7-1 7.5-4.5z"/>
+                </svg>
+            </div>
+        </div>
+
+        <div id="coverContent" class="relative z-20 h-full flex flex-col items-center justify-between p-6 transition-all duration-700">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <svg class="absolute top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-md h-auto opacity-50 text-white" viewBox="0 0 300 400" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M 10 400 V 150 A 140 140 0 0 1 290 150 V 400" />
+                </svg>
+                <svg class="absolute -top-6 -left-10 w-48 text-white opacity-90 animate-cloud-left" viewBox="0 0 100 60" fill="currentColor">
+                    <path d="M10 50 Q 25 20 45 35 Q 65 10 85 30 Q 95 45 75 55 Z"/>
+                </svg>
+                <svg class="absolute -top-4 -right-10 w-56 text-white opacity-90 animate-cloud-right" viewBox="0 0 100 60" fill="currentColor">
+                    <path d="M10 50 Q 25 15 50 30 Q 75 10 90 40 Q 95 55 70 55 Z"/>
+                </svg>
+                <div class="absolute top-1/4 left-10 w-3 h-3 bg-amber-200 rounded-full blur-[1px] animate-sparkle"></div>
+                <div class="absolute top-1/3 right-12 w-4 h-4 bg-amber-100 rounded-full blur-[1px] animate-sparkle" style="animation-delay: 1s;"></div>
+            </div>
+
+            <div class="my-auto text-center max-w-lg space-y-6 pt-8">
+                <div class="relative inline-block">
+                    <p class="font-serif italic text-amber-800 text-xl sm:text-2xl tracking-wide font-bold drop-shadow-[0_1px_8px_rgba(255,255,255,0.9)]">
+                        ✨ Happy Wedding ✨
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-slate-800 font-bold tracking-tight drop-shadow-sm">
+                        Senja <span class="text-amber-700 font-normal">&amp;</span> Naila
+                    </h1>
+                    <div class="w-16 h-0.5 bg-amber-600/80 mx-auto my-3"></div>
+                    <p class="text-sm sm:text-base text-slate-700 tracking-[0.3em] font-semibold uppercase">22 . 12 . 2026</p>
+                </div>
+
+                <p class="text-xs sm:text-sm text-slate-700 max-w-xs mx-auto pt-4 leading-relaxed font-medium bg-white/40 backdrop-blur-md p-4 rounded-2xl shadow-sm border border-white/60">
+                    Kepada Yth. Bapak/Ibu/Saudara/i,<br>
+                    Kami mengundang Anda untuk berbagi kebahagiaan di hari pernikahan kami.
+                </p>
+            </div>
+
+            <div class="pb-8 text-center space-y-3">
+                <button onclick="openInvitation()" class="group relative inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-amber-500 to-amber-700 text-white font-semibold text-sm rounded-full shadow-lg shadow-amber-900/15 hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300">
+                    <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-89a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>Ketuk untuk Membuka</span>
+                </button>
+                <p class="text-[11px] text-slate-600 font-medium animate-pulse-glow">Gunakan audio untuk pengalaman terbaik</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOMBOL MUSIC BG -->
+    <div id="musicControls" class="fixed bottom-6 right-6 z-40 hidden items-center gap-2">
+        <div id="musicStatusBadge" class="hidden sm:flex px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-[11px] font-semibold text-slate-700 shadow-md border border-gold/30">
+            <span id="musicStatusText">Musik Latar</span>
+        </div>
+        <button id="toggleMusicBtn" onclick="toggleMusic()" class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-md border border-gold/40 text-gold-dark shadow-lg flex items-center justify-center hover:bg-gold hover:text-white transition-all duration-300 active:scale-90" title="Kontrol Musik Latar">
+            <svg id="iconMusicOn" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 .895-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 .895-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+            </svg>
+            <svg id="iconMusicOff" class="w-6 h-6 hidden text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Element Audio HTML5 -->
+    <audio id="murottalAudio" preload="auto">
+        <source src="assets/audio/murottal.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bgMusicAudio" loop preload="auto">
+        <source src="assets/audio/musicbg.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="toastNotification" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transform -translate-y-20 opacity-0 transition-all duration-300 pointer-events-none max-w-sm w-[90%] bg-slate-900/90 backdrop-blur-md text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3">
+        <div id="toastIcon" class="text-gold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <p id="toastMessage" class="text-xs sm:text-sm font-medium">Pesan pemberitahuan</p>
+    </div>
+
+    <!-- HALAMAN UTAMA -->
+    <main class="relative min-h-screen">
+
+        <!-- LAYAR 2: AYAT AR-RUM 21 -->
+        <section id="layarAyat" class="relative min-h-screen flex flex-col justify-center items-center px-4 py-16 overflow-hidden bg-gradient-to-b from-sky-200 via-sky-100 to-cream">
+            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                <div class="absolute inset-x-0 bottom-0 h-3/4 bg-[radial-gradient(ellipse_at_50%_100%,rgba(255,255,255,0.8),transparent_70%)]"></div>
+
+                <svg class="absolute top-2 -left-10 w-48 text-white opacity-90 animate-cloud-left" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 20 45 35 Q 65 10 85 30 Q 95 45 75 55 Z"/></svg>
+                <svg class="absolute top-6 -right-10 w-56 text-white opacity-90 animate-cloud-right" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 15 50 30 Q 75 10 90 40 Q 95 55 70 55 Z"/></svg>
+                <svg class="absolute top-[22%] left-[26%] w-40 text-white opacity-70 animate-cloud-right" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 20 45 35 Q 65 10 85 30 Q 95 45 75 55 Z"/></svg>
+                <svg class="absolute top-[36%] -right-8 w-44 text-white opacity-60 animate-cloud-left" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 15 50 30 Q 75 10 90 40 Q 95 55 70 55 Z"/></svg>
+
+                <div class="absolute top-[12%] left-0 animate-bird-1"><svg class="flap w-9 h-9 text-slate-700/60" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c-1.5 1.5-3.5 2-5.5 1.5-1.5-.4-3-1.5-4.5-3-1.5 1.5-3 2.6-4.5 3C5.5 8 3.5 7.5 2 6c1.8 3.5 4.5 5 7.5 4.5 2-.3 3.8-1.5 4.5-2.5.7 1 2.5 2.2 4.5 2.5 3 .5 5.7-1 7.5-4.5z"/></svg></div>
+                <div class="absolute top-[20%] left-0 animate-bird-2"><svg class="flap w-7 h-7 text-slate-700/50" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c-1.5 1.5-3.5 2-5.5 1.5-1.5-.4-3-1.5-4.5-3-1.5 1.5-3 2.6-4.5 3C5.5 8 3.5 7.5 2 6c1.8 3.5 4.5 5 7.5 4.5 2-.3 3.8-1.5 4.5-2.5.7 1 2.5 2.2 4.5 2.5 3 .5 5.7-1 7.5-4.5z"/></svg></div>
+                <div class="absolute top-[31%] left-0 animate-bird-3"><svg class="flap w-6 h-6 text-slate-700/45" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c-1.5 1.5-3.5 2-5.5 1.5-1.5-.4-3-1.5-4.5-3-1.5 1.5-3 2.6-4.5 3C5.5 8 3.5 7.5 2 6c1.8 3.5 4.5 5 7.5 4.5 2-.3 3.8-1.5 4.5-2.5.7 1 2.5 2.2 4.5 2.5 3 .5 5.7-1 7.5-4.5z"/></svg></div>
+                <div class="absolute top-[7%] left-0 animate-bird-4"><svg class="flap w-5 h-5 text-slate-700/40" viewBox="0 0 24 24" fill="currentColor"><path d="M22 6c-1.5 1.5-3.5 2-5.5 1.5-1.5-.4-3-1.5-4.5-3-1.5 1.5-3 2.6-4.5 3C5.5 8 3.5 7.5 2 6c1.8 3.5 4.5 5 7.5 4.5 2-.3 3.8-1.5 4.5-2.5.7 1 2.5 2.2 4.5 2.5 3 .5 5.7-1 7.5-4.5z"/></svg></div>
+
+                <!-- PEMANDANGAN -->
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[720px] aspect-[400/440]">
+                <svg viewBox="0 0 400 440" class="w-full h-full overflow-visible" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="gFar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3F2EA"/><stop offset="1" stop-color="#C9E6D3"/></linearGradient>
+                        <linearGradient id="gHill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BDE3B8"/><stop offset="1" stop-color="#7FBF8B"/></linearGradient>
+                        <linearGradient id="gMid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9E0B4"/><stop offset="1" stop-color="#97CB98"/></linearGradient>
+                        <linearGradient id="gLawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8FCB93"/><stop offset="1" stop-color="#6FB57F"/></linearGradient>
+                        <linearGradient id="gLake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9E2FA"/><stop offset="1" stop-color="#55BCE6"/></linearGradient>
+                        <g id="t1"><rect x="-2.5" y="-30" width="5" height="34" rx="2" fill="#7B5E42"/><circle cx="0" cy="-46" r="15" fill="#7FBF8B"/><circle cx="-11" cy="-37" r="10" fill="#92CE9A"/><circle cx="11" cy="-38" r="10" fill="#6FB37E"/><g fill="#FFC9D6"><circle cx="-6" cy="-50" r="2.4"/><circle cx="7" cy="-44" r="2.4"/><circle cx="-13" cy="-38" r="2.2"/><circle cx="12" cy="-34" r="2.2"/><circle cx="1" cy="-38" r="2"/></g></g>
+                        <g id="t2"><rect x="-2" y="-12" width="4" height="16" rx="2" fill="#7B5E42"/><ellipse cx="0" cy="-34" rx="9" ry="26" fill="#6FAE80"/><ellipse cx="-3" cy="-38" rx="4" ry="17" fill="#8CC79B" opacity=".75"/></g>
+                        <g id="t3"><rect x="-2.5" y="-28" width="5" height="32" rx="2" fill="#8B6B4A"/><circle cx="0" cy="-45" r="15" fill="#F7B6C8"/><circle cx="-12" cy="-37" r="10" fill="#F4A7B9"/><circle cx="12" cy="-38" r="10" fill="#FFD6E0"/><circle cx="-3" cy="-54" r="8" fill="#FFD6E0"/><g fill="#fff"><circle cx="-5" cy="-46" r="2"/><circle cx="8" cy="-42" r="2"/><circle cx="-12" cy="-36" r="1.8"/></g><g fill="#7FBF8B"><circle cx="3" cy="-34" r="2.4"/><circle cx="-8" cy="-30" r="2"/></g></g>
+                        <g id="fl"><path d="M0 0V-9" stroke="#5E9E6C" stroke-width="1.2" fill="none"/><g fill="currentColor"><circle cx="-2.2" cy="-10" r="2.1"/><circle cx="2.2" cy="-10" r="2.1"/><circle cx="0" cy="-12.4" r="2.1"/><circle cx="0" cy="-8" r="2.1"/></g><circle cx="0" cy="-10" r="1.3" fill="#FFE169"/></g>
+                    </defs>
+
+                    <path d="M-900 440V262Q-450 230 -120 250Q30 258 100 232Q175 200 240 218Q290 120 345 135Q420 150 520 215Q900 245 1300 255V440Z" fill="url(#gFar)"/>
+                    <use href="#t2" transform="translate(150 226) scale(0.42)"/><use href="#t1" transform="translate(182 214) scale(0.36)"/><use href="#t3" transform="translate(212 214) scale(0.34)"/><use href="#t2" transform="translate(232 224) scale(0.4)"/>
+
+                    <path d="M250 440V252Q258 182 300 140Q326 98 352 94Q388 94 412 128Q442 162 520 216Q700 250 1300 262V440Z" fill="url(#gHill)"/>
+                    <path d="M300 140Q326 98 352 94Q388 94 412 128" fill="none" stroke="#E9F7E4" stroke-width="3" opacity=".55"/>
+                    <use href="#t1" transform="translate(277 196) scale(0.5)"/><use href="#t3" transform="translate(296 162) scale(0.4)"/><use href="#t2" transform="translate(384 112) scale(0.36)"/><use href="#t3" transform="translate(428 152) scale(0.5)"/><use href="#t1" transform="translate(466 184) scale(0.46)"/><use href="#t2" transform="translate(506 214) scale(0.44)"/><use href="#t3" transform="translate(560 224) scale(0.5)"/>
+                    <path d="M318 136Q314 210 308 300L370 300Q362 210 358 134Q338 124 318 136Z" fill="#8FA98F"/>
+                    <path d="M326 150Q324 220 322 296L336 296Q336 220 334 150Z" fill="#7E977F" opacity=".6"/>
+                    <path d="M340 132C338 190 343 245 340 300" stroke="#DFF3FC" stroke-width="15" fill="none" opacity=".8"/>
+                    <path d="M340 132C338 190 343 245 340 300" stroke="#fff" stroke-width="11" fill="none" class="fall-dash"/>
+                    <path d="M344 140C343 195 346 250 343 300" stroke="#fff" stroke-width="4" fill="none" class="fall-dash2"/>
+                    <path d="M262 300Q340 284 418 300Q452 322 418 342Q340 354 262 342Q232 322 262 300Z" fill="url(#gLake)"/>
+                    <path d="M285 322Q320 318 352 323M330 336Q370 332 405 337" stroke="#fff" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".65"/>
+                    <ellipse cx="340" cy="302" rx="30" ry="7" fill="#fff" opacity=".8" class="mist"/>
+                    <ellipse cx="340" cy="298" rx="18" ry="11" fill="#fff" opacity=".45" class="mist"/>
+                    <g transform="translate(300 326)"><ellipse cy="4" rx="12" ry="4.5" fill="#4A7C59" opacity=".75"/><circle cx="-3" r="4.2" fill="#FFB7C5"/><circle cx="3" r="4.2" fill="#FFB7C5"/><circle cy="-3" r="4.2" fill="#fff"/><circle cy="1" r="2.4" fill="#FFE169"/></g>
+                    <g transform="translate(386 334)"><ellipse cy="4" rx="10" ry="4" fill="#4A7C59" opacity=".75"/><circle cx="-3" r="3.6" fill="#E8A7A1"/><circle cx="3" r="3.6" fill="#E8A7A1"/><circle cy="-3" r="3.6" fill="#FFF0F5"/><circle cy="1" r="2" fill="#FFE169"/></g>
+
+                    <path d="M-900 440V340Q-500 324 -100 338Q60 346 150 332Q250 322 300 346Q430 372 600 342Q900 326 1300 340V440Z" fill="url(#gMid)"/>
+                    <use href="#t3" transform="translate(176 350) scale(0.95)"/><use href="#t1" transform="translate(206 346) scale(0.8)"/><use href="#t2" transform="translate(238 346) scale(0.8)"/><use href="#t1" transform="translate(440 358) scale(1.0)"/><use href="#t3" transform="translate(500 352) scale(0.9)"/>
+                    <path d="M62 372L90 372Q100 408 122 440L30 440Q54 408 62 372Z" fill="#F6EBD3" opacity=".95"/>
+                    <path d="M66 372L86 372Q94 404 110 440L48 440Q62 404 66 372Z" fill="#E7BFB6" opacity=".7"/>
+
+                    <!-- PELAMINAN -->
+                    <ellipse cx="76" cy="374" rx="72" ry="7" fill="#3F7F4D" opacity=".32"/>
+                    <g transform="translate(14 229.4) scale(.62)">
+                        <rect x="10" y="210" width="180" height="20" rx="4" fill="#E2D4C3" stroke="#C5A059" stroke-width="1.5"/>
+                        <rect x="25" y="200" width="150" height="10" rx="2" fill="#F4ECE1" stroke="#D4AF7A" stroke-width="1"/>
+                        <path d="M 35 200 L 45 180 L 155 180 L 165 200 Z" fill="#D4AF7A" opacity="0.3"/>
+                        <path d="M 80 200 L 85 230 L 115 230 L 120 200 Z" fill="#C96B6B" opacity="0.85"/>
+                        
+                        <rect x="30" y="60" width="12" height="140" rx="3" fill="#FFFFFF" stroke="#D4AF7A" stroke-width="1.5"/>
+                        <rect x="158" y="60" width="12" height="140" rx="3" fill="#FFFFFF" stroke="#D4AF7A" stroke-width="1.5"/>
+                        
+                        <path d="M 30 70 Q 100 15 170 70" fill="none" stroke="#D4AF7A" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M 36 75 Q 100 28 164 75" fill="none" stroke="#E6F4FB" stroke-width="2"/>
+
+                        <path d="M 36 70 Q 70 85 95 140 Q 60 110 36 70 Z" fill="#FBF7F0" opacity="0.85" stroke="#D4AF7A" stroke-width="0.5"/>
+                        <path d="M 164 70 Q 130 85 105 140 Q 140 110 164 70 Z" fill="#FBF7F0" opacity="0.85" stroke="#D4AF7A" stroke-width="0.5"/>
+
+                        <rect x="65" y="145" width="70" height="35" rx="6" fill="#FFFFFF" stroke="#D4AF7A" stroke-width="1.5"/>
+                        <rect x="70" y="130" width="60" height="20" rx="4" fill="#FDFBF7" stroke="#D4AF7A" stroke-width="1.2"/>
+                        <circle cx="80" cy="155" r="5" fill="#E6C594"/>
+                        <circle cx="120" cy="155" r="5" fill="#E6C594"/>
+
+                        <circle cx="36" cy="70" r="10" fill="#F4C2C2"/>
+                        <circle cx="45" cy="62" r="8" fill="#FFF0F5"/>
+                        <circle cx="30" cy="80" r="7" fill="#E8A7A1"/>
+                        <circle cx="36" cy="70" r="4" fill="#D4AF7A"/>
+
+                        <circle cx="100" cy="35" r="11" fill="#FFF0F5"/>
+                        <circle cx="90" cy="40" r="8" fill="#F4C2C2"/>
+                        <circle cx="110" cy="40" r="8" fill="#F4C2C2"/>
+                        <circle cx="100" cy="35" r="5" fill="#D4AF7A"/>
+
+                        <circle cx="164" cy="70" r="10" fill="#F4C2C2"/>
+                        <circle cx="155" cy="62" r="8" fill="#FFF0F5"/>
+                        <circle cx="170" cy="80" r="7" fill="#E8A7A1"/>
+                        <circle cx="164" cy="70" r="4" fill="#D4AF7A"/>
+
+                        <path d="M 20 75 Q 10 70 15 85 Z" fill="#7BA05B"/>
+                        <path d="M 180 75 Q 190 70 185 85 Z" fill="#7BA05B"/>
+                        <path d="M 100 20 Q 105 10 115 18 Z" fill="#7BA05B"/>
+                        <path d="M 100 20 Q 95 10 85 18 Z" fill="#7BA05B"/>
+
+                        <path d="M 20 160 L 25 195 L 15 195 Z" fill="#D4AF7A"/>
+                        <circle cx="20" cy="155" r="9" fill="#F3E5AB"/>
+                        <circle cx="17" cy="150" r="6" fill="#F4C2C2"/>
+
+                        <path d="M 180 160 L 185 195 L 175 195 Z" fill="#D4AF7A"/>
+                        <circle cx="180" cy="155" r="9" fill="#F3E5AB"/>
+                        <circle cx="183" cy="150" r="6" fill="#F4C2C2"/>
+                    </g>
+
+                    <path d="M-900 440V394Q-450 374 -80 388Q80 398 200 386Q330 374 480 392Q900 406 1300 390V440Z" fill="url(#gLawn)"/>
+                    <use href="#t3" transform="translate(160 402) scale(1.0)"/><use href="#t1" transform="translate(372 404) scale(1.2)"/><use href="#t2" transform="translate(414 404) scale(1.0)"/><use href="#t3" transform="translate(470 410) scale(1.2)"/>
+                    <use href="#fl" transform="translate(27.7 340.9) scale(0.77)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(20.6 342.5) scale(0.66)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(17.4 346.7) scale(0.84)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(363.5 350.3) scale(0.76)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(407.6 350.8) scale(0.81)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(210.9 351.7) scale(0.75)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(24.0 352.0) scale(0.60)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(297.3 352.0) scale(0.81)" style="color:#FFB7C5"/>
+                    <use href="#fl" transform="translate(27.7 352.2) scale(0.77)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(362.3 352.4) scale(0.64)" style="color:#C9A4E8"/>
+                    <use href="#fl" transform="translate(175.6 353.2) scale(0.61)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(216.1 355.3) scale(0.85)" style="color:#C9A4E8"/>
+                    <use href="#fl" transform="translate(11.9 355.4) scale(0.74)" style="color:#F7A8BC"/>
+                    <use href="#fl" transform="translate(273.1 358.0) scale(0.73)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(411.1 360.5) scale(0.84)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(13.0 364.9) scale(0.76)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(10.4 365.1) scale(0.61)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(279.5 366.7) scale(0.85)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(277.1 367.4) scale(0.91)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(184.2 368.3) scale(0.71)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(257.4 369.3) scale(0.90)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(380.0 369.9) scale(0.69)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(224.4 370.0) scale(0.74)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(389.7 371.1) scale(0.66)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(326.0 371.3) scale(0.88)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(167.6 372.4) scale(0.75)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(218.3 373.7) scale(0.71)" style="color:#F7A8BC"/>
+                    <use href="#fl" transform="translate(204.4 375.3) scale(0.86)" style="color:#F7A8BC"/>
+                    <use href="#fl" transform="translate(224.5 376.1) scale(0.60)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(370.8 377.3) scale(0.77)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(352.9 377.6) scale(0.65)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(167.2 377.7) scale(0.94)" style="color:#FFB7C5"/>
+                    <use href="#fl" transform="translate(23.6 378.1) scale(0.63)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(32.7 378.4) scale(0.72)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(102.1 378.5) scale(0.58)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(211.5 381.1) scale(0.83)" style="color:#F7A8BC"/>
+                    <use href="#fl" transform="translate(107.0 381.5) scale(0.53)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(132.4 381.6) scale(0.61)" style="color:#C9A4E8"/>
+                    <use href="#fl" transform="translate(18.7 381.6) scale(0.90)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(286.4 382.2) scale(0.84)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(111.8 383.5) scale(0.69)" style="color:#C9A4E8"/>
+                    <use href="#fl" transform="translate(97.7 384.0) scale(0.66)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(42.5 384.3) scale(0.68)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(43.4 387.0) scale(0.60)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(45.4 387.4) scale(0.58)" style="color:#C9A4E8"/>
+                    <use href="#fl" transform="translate(117.6 387.6) scale(0.75)" style="color:#F7A8BC"/>
+                    <use href="#fl" transform="translate(133.0 387.6) scale(0.72)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(13.8 388.0) scale(0.61)" style="color:#FFB7C5"/>
+                    <use href="#fl" transform="translate(338.4 394.6) scale(1.46)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(145.6 395.1) scale(1.00)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(255.6 395.4) scale(1.13)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(-38.6 396.9) scale(1.28)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(123.8 400.1) scale(1.24)" style="color:#C9A4E8"/>
+                    <use href="#fl" transform="translate(403.1 401.3) scale(1.19)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(-4.2 402.3) scale(1.32)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(-26.4 402.9) scale(1.41)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(409.4 404.3) scale(1.26)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(-15.0 404.8) scale(1.11)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(234.3 407.4) scale(1.49)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(293.1 412.3) scale(1.50)" style="color:#FFFFFF"/>
+                    <use href="#fl" transform="translate(135.3 413.0) scale(1.16)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(18.8 414.0) scale(1.40)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(318.0 414.1) scale(1.09)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(264.8 414.1) scale(1.07)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(383.9 414.6) scale(1.16)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(347.8 415.5) scale(1.23)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(177.5 417.2) scale(1.14)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(383.1 419.3) scale(1.18)" style="color:#FFE08A"/>
+                    <use href="#fl" transform="translate(377.8 421.1) scale(1.03)" style="color:#FFD66B"/>
+                    <use href="#fl" transform="translate(293.1 421.3) scale(1.47)" style="color:#F7A8BC"/>
+                    <use href="#fl" transform="translate(32.5 421.9) scale(1.21)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(288.0 422.4) scale(1.44)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(346.5 426.5) scale(1.22)" style="color:#C9A4E8"/>
+                    <use href="#fl" transform="translate(-6.8 427.3) scale(1.08)" style="color:#F58F7A"/>
+                    <use href="#fl" transform="translate(34.3 428.3) scale(1.02)" style="color:#F7A8BC"/>
+                    <use href="#fl" transform="translate(127.1 432.9) scale(1.14)" style="color:#C9A4E8"/>
+                    <use href="#fl" transform="translate(155.4 435.5) scale(1.48)" style="color:#F7A8BC"/>
+                </svg>
+                </div>
+
+                <i class="dot" style="left:18%;bottom:10%;animation-delay:0s"></i>
+                <i class="dot" style="left:34%;bottom:6%;animation-delay:2s"></i>
+                <i class="dot" style="left:52%;bottom:12%;animation-delay:4s"></i>
+                <i class="dot" style="left:70%;bottom:8%;animation-delay:1s"></i>
+                <i class="dot" style="left:84%;bottom:14%;animation-delay:5s"></i>
+            </div>
+
+            <div class="relative z-10 max-w-3xl w-full text-center space-y-8 px-4 sm:px-6">
+                <div class="relative flex items-center justify-center w-full min-h-[44px]">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm text-gold-dark text-xs font-semibold tracking-wider uppercase border border-gold/30 shadow-sm">
+                        <span>QS. Ar-Rum: 21</span>
+                    </div>
+
+                    <button id="btnMurottal" onclick="toggleMurottal()" class="absolute right-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm border border-gold/40 text-gold-dark text-xs font-semibold shadow-md hover:bg-gold hover:text-white transition-all active:scale-95" title="Kontrol Murottal">
+                        <svg id="iconMurPause" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <svg id="iconMurPlay" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                        </svg>
+                        <svg id="iconMurReplay" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                        <span id="textMurStatus" class="hidden sm:inline">Pause</span>
+                    </button>
+                </div>
+
+                <div id="subtitleContainer" class="space-y-6 transition-all duration-500 min-h-[220px] flex flex-col justify-center"></div>
+
+                <div id="fullTranslation" class="hidden pt-6 border-t border-gold/30 text-xs sm:text-sm text-slate-700 leading-relaxed font-serif italic transition-opacity duration-1000 opacity-0 bg-white/40 backdrop-blur-sm p-4 rounded-2xl shadow-sm">
+                    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berpikir."
+                </div>
+            </div>
+
+            <div class="relative z-10 pt-12 flex flex-col items-center gap-2 text-slate-400 text-xs">
+                <span>Gulir ke bawah</span>
+                <svg class="w-4 h-4 animate-bounce text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- BAGIAN BAWAH AYAT -->
+        <div id="surgaBawah" class="relative overflow-x-clip bg-[linear-gradient(180deg,#F5EFE6_0%,#E6F4FB_20%,#FFF6E3_42%,#E6F4FB_64%,#FFF6E3_86%,#FDF0D5_100%)]">
+            <svg width="0" height="0" class="absolute" aria-hidden="true"><defs>
+  <g id="sparkStar"><path d="M0 -8Q1 -1 8 0Q1 1 0 8Q-1 1 -8 0Q-1 -1 0 -8Z" fill="#F3D58E"/></g>
+  <g id="vine"><path d="M30 0C8 40 52 80 28 120C6 160 50 200 30 260" fill="none" stroke="#6FAE80" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#8CC79B"><path d="M20 30q-12-8-16 0q8 8 16 0z"/><path d="M40 62q12-8 16 0q-8 8-16 0z"/><path d="M26 108q-12-8-18 0q8 8 18 0z"/><path d="M38 142q12-8 17 0q-8 8-17 0z"/><path d="M24 178q-12-8-17 0q8 8 17 0z"/><path d="M36 222q12-8 16 0q-8 8-16 0z"/></g>
+    <g><circle cx="16" cy="38" r="6" fill="#F7B6C8"/><circle cx="16" cy="38" r="2.2" fill="#FFE169"/><circle cx="46" cy="72" r="5.5" fill="#fff"/><circle cx="46" cy="72" r="2" fill="#FFE169"/><circle cx="14" cy="118" r="6" fill="#FFD6E0"/><circle cx="14" cy="118" r="2.2" fill="#F4A7B9"/><circle cx="44" cy="150" r="6" fill="#F4A7B9"/><circle cx="44" cy="150" r="2.2" fill="#FFE169"/><circle cx="14" cy="186" r="5.5" fill="#fff"/><circle cx="14" cy="186" r="2" fill="#FFE169"/><circle cx="44" cy="228" r="6" fill="#F7B6C8"/><circle cx="44" cy="228" r="2.2" fill="#FFE169"/></g></g>
+  <pattern id="scallop" width="120" height="56" patternUnits="userSpaceOnUse"><g fill="#F5EFE6"><circle cx="30" cy="40" r="24"/><circle cx="78" cy="34" r="30"/><circle cx="108" cy="44" r="18"/></g></pattern>
+</defs></svg>
+
+            <div class="sticky top-0 h-0 z-20 pointer-events-none"><div class="relative h-screen overflow-hidden">
+            <i class="petal" style="left:16%;--dx:56px;background:#F7B6C8;width:14px;height:12px;animation-duration:19s;animation-delay:-18s"></i>
+<i class="petal" style="left:76%;--dx:51px;background:#FFD6E0;width:13px;height:15px;animation-duration:18s;animation-delay:-2s"></i>
+<i class="petal" style="left:81%;--dx:60px;background:#F7B6C8;width:9px;height:17px;animation-duration:15s;animation-delay:-18s"></i>
+<i class="petal" style="left:95%;--dx:48px;background:#F4A7B9;width:14px;height:14px;animation-duration:11s;animation-delay:-14s"></i>
+<i class="petal" style="left:35%;--dx:-61px;background:#F7B6C8;width:10px;height:18px;animation-duration:15s;animation-delay:-4s"></i>
+<i class="petal" style="left:71%;--dx:55px;background:#F4A7B9;width:9px;height:13px;animation-duration:18s;animation-delay:-12s"></i>
+<i class="petal" style="left:54%;--dx:-82px;background:#F4A7B9;width:13px;height:14px;animation-duration:17s;animation-delay:-11s"></i>
+<i class="petal" style="left:66%;--dx:44px;background:#FFFFFF;width:9px;height:13px;animation-duration:13s;animation-delay:-7s"></i>
+<i class="petal" style="left:64%;--dx:-61px;background:#FFE9B0;width:10px;height:14px;animation-duration:15s;animation-delay:-0s"></i>
+<i class="petal" style="left:16%;--dx:69px;background:#FFE9B0;width:11px;height:13px;animation-duration:19s;animation-delay:-1s"></i>
+<i class="petal" style="left:45%;--dx:55px;background:#F4A7B9;width:12px;height:12px;animation-duration:18s;animation-delay:-12s"></i>
+<i class="petal" style="left:8%;--dx:-43px;background:#F4A7B9;width:10px;height:12px;animation-duration:16s;animation-delay:-1s"></i>
+<i class="petal" style="left:12%;--dx:-64px;background:#F7B6C8;width:11px;height:16px;animation-duration:11s;animation-delay:-2s"></i>
+<i class="petal" style="left:84%;--dx:39px;background:#FFD6E0;width:11px;height:16px;animation-duration:16s;animation-delay:-15s"></i>
+            </div></div>
+
+            <svg class="absolute -top-9 inset-x-0 w-full h-12 z-[12] pointer-events-none" aria-hidden="true"><rect width="100%" height="100%" fill="url(#scallop)" transform="translate(0 -4)"/><rect y="40" width="100%" height="16" fill="#F5EFE6"/></svg>
+
+            <div class="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+                <div class="absolute top-[6%] -left-24 w-72 h-72 rounded-full bg-sky-200/50 blur-3xl"></div>
+                <div class="absolute top-[28%] -right-24 w-80 h-80 rounded-full bg-amber-200/40 blur-3xl"></div>
+                <div class="absolute top-[50%] -left-20 w-72 h-72 rounded-full bg-pink-200/40 blur-3xl"></div>
+                <div class="absolute top-[72%] -right-20 w-80 h-80 rounded-full bg-sky-200/50 blur-3xl"></div>
+                <div class="ray absolute top-0 right-[8%] w-40 h-[34%] bg-[linear-gradient(105deg,transparent_30%,rgba(255,240,200,.65)_50%,transparent_70%)] [mask-image:linear-gradient(180deg,#000,transparent)]"></div>
+                <div class="ray absolute top-[38%] left-[6%] w-44 h-[28%] bg-[linear-gradient(255deg,transparent_30%,rgba(255,240,200,.6)_50%,transparent_70%)] [mask-image:linear-gradient(180deg,#000,transparent)]" style="animation-delay:2.5s"></div>
+                <div class="ray absolute top-[66%] right-[12%] w-40 h-[26%] bg-[linear-gradient(105deg,transparent_30%,rgba(255,240,200,.6)_50%,transparent_70%)] [mask-image:linear-gradient(180deg,#000,transparent)]" style="animation-delay:4.5s"></div>
+                <svg class="absolute top-[6%] -left-10 w-44 text-white opacity-90 animate-cloud-left" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 20 45 35 Q 65 10 85 30 Q 95 45 75 55 Z"/></svg>
+<svg class="absolute top-[14%] -right-12 w-52 text-white opacity-80 animate-cloud-right" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 15 50 30 Q 75 10 90 40 Q 95 55 70 55 Z"/></svg>
+<svg class="absolute top-[27%] left-[8%] w-40 text-white opacity-70 animate-cloud-right" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 20 45 35 Q 65 10 85 30 Q 95 45 75 55 Z"/></svg>
+<svg class="absolute top-[41%] -right-10 w-56 text-white opacity-80 animate-cloud-left" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 15 50 30 Q 75 10 90 40 Q 95 55 70 55 Z"/></svg>
+<svg class="absolute top-[53%] -left-12 w-48 text-white opacity-80 animate-cloud-right" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 15 50 30 Q 75 10 90 40 Q 95 55 70 55 Z"/></svg>
+<svg class="absolute top-[66%] right-[6%] w-40 text-white opacity-70 animate-cloud-left" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 20 45 35 Q 65 10 85 30 Q 95 45 75 55 Z"/></svg>
+<svg class="absolute top-[78%] -left-8 w-52 text-white opacity-80 animate-cloud-left" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 20 45 35 Q 65 10 85 30 Q 95 45 75 55 Z"/></svg>
+<svg class="absolute top-[88%] -right-10 w-44 text-white opacity-70 animate-cloud-right" viewBox="0 0 100 60" fill="currentColor"><path d="M10 50 Q 25 15 50 30 Q 75 10 90 40 Q 95 55 70 55 Z"/></svg>
+                <svg class="absolute left-0 top-[9%] w-14 h-auto opacity-90" viewBox="0 0 60 260"><use href="#vine"/></svg>
+<svg class="absolute right-0 top-[21%] w-14 h-auto opacity-90 -scale-x-100" viewBox="0 0 60 260"><use href="#vine"/></svg>
+<svg class="absolute left-0 top-[33%] w-16 h-auto opacity-90" viewBox="0 0 60 260"><use href="#vine"/></svg>
+<svg class="absolute right-0 top-[45%] w-16 h-auto opacity-90 -scale-x-100" viewBox="0 0 60 260"><use href="#vine"/></svg>
+<svg class="absolute left-0 top-[57%] w-14 h-auto opacity-90" viewBox="0 0 60 260"><use href="#vine"/></svg>
+<svg class="absolute right-0 top-[69%] w-14 h-auto opacity-90 -scale-x-100" viewBox="0 0 60 260"><use href="#vine"/></svg>
+<svg class="absolute left-0 top-[80%] w-16 h-auto opacity-90" viewBox="0 0 60 260"><use href="#vine"/></svg>
+<svg class="absolute right-0 top-[70%] w-16 h-auto opacity-90 -scale-x-100" viewBox="0 0 60 260"><use href="#vine"/></svg>
+                <svg class="absolute animate-sparkle w-4 h-4" style="top:33%;left:17%;animation-delay:2.0s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:10%;left:52%;animation-delay:1.1s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:8%;left:50%;animation-delay:0.1s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:43%;left:9%;animation-delay:0.3s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:42%;left:79%;animation-delay:0.4s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:24%;left:61%;animation-delay:2.8s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:57%;left:39%;animation-delay:2.9s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:7%;left:82%;animation-delay:0.9s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:16%;left:14%;animation-delay:0.9s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:79%;left:20%;animation-delay:1.7s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:62%;left:37%;animation-delay:1.6s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:9%;left:8%;animation-delay:0.6s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:66%;left:42%;animation-delay:0.9s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:57%;left:45%;animation-delay:0.9s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:77%;left:67%;animation-delay:0.7s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:56%;left:51%;animation-delay:2.6s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:71%;left:29%;animation-delay:2.9s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+<svg class="absolute animate-sparkle w-4 h-4" style="top:14%;left:41%;animation-delay:2.3s" viewBox="-9 -9 18 18"><use href="#sparkStar"/></svg>
+            </div>
+
+        <!-- PROFIL MEMPELAI -->
+        <section id="mempelai" class="relative z-10 py-20 px-4 max-w-5xl mx-auto overflow-hidden">
+            <div class="text-center space-y-3 mb-16 relative z-10">
+                <h2 class="font-serif text-3xl sm:text-4xl text-slate-800 font-bold">Mempelai Pria &amp; Wanita</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-slate-500 text-sm max-w-md mx-auto">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-stretch relative z-10">
+                <!-- KARTU SENJA -->
+                <div class="flip-card w-full h-[540px] cursor-pointer group" onclick="toggleFlip(this, event)">
+                    <div class="flip-card-inner shadow-xl shadow-gold/10 rounded-3xl">
+                        <div class="flip-card-front bg-white p-8 border border-gold/20 flex flex-col items-center justify-center space-y-4">
+                            <div class="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto group-hover:scale-105 transition-transform duration-500">
+                                <div class="w-full h-full flex items-center justify-center">
+                                    <img src="assets/images/pria.png" alt="Foto Senja" class="w-full h-full object-contain drop-shadow-lg" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                                    <svg class="w-full h-full text-slate-700" viewBox="0 0 120 120" fill="none" style="display:none">
+                                        <circle cx="60" cy="60" r="60" fill="#E6F4FB"/>
+                                        <path d="M30 110 C30 85 45 75 60 75 C75 75 90 85 90 110 Z" fill="#2C3E50"/>
+                                        <path d="M50 75 L60 90 L70 75 Z" fill="#FFFFFF"/>
+                                        <path d="M58 82 L62 82 L61 100 L59 100 Z" fill="#D4AF7A"/>
+                                        <circle cx="60" cy="72" r="10" fill="#F3C8A8"/>
+                                        <circle cx="60" cy="50" r="22" fill="#F3C8A8"/>
+                                        <path d="M38 50 C38 32 50 28 60 28 C70 28 82 32 82 50 C82 42 75 34 60 34 C45 34 38 42 38 50 Z" fill="#1E293B"/>
+                                        <circle cx="52" cy="48" r="2.5" fill="#1E293B"/>
+                                        <circle cx="68" cy="48" r="2.5" fill="#1E293B"/>
+                                        <path d="M55 58 Q60 63 65 58" stroke="#1E293B" stroke-width="2" stroke-linecap="round" fill="none"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-slate-800">Senja Vendra Rivaldo</h3>
+                                <p class="text-xs text-gold-dark font-medium mt-1">Putra dari Bapak Heri Siswanto</p>
+                            </div>
+                            <p class="text-xs text-slate-500 leading-relaxed max-w-xs mx-auto text-center">
+                                Pria yang selalu bersyukur dan berharap dapat membimbing keluarga menjadi sakinah, mawaddah, wa rahmah.
+                            </p>
+                            <div class="mt-2 flex items-center gap-1.5 text-[10px] text-slate-400 bg-slate-50 px-3 py-1.5 rounded-full animate-pulse border border-slate-100">
+                                <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                                <span>Sentuh untuk kenal lebih dekat</span>
+                            </div>
+                        </div>
+
+                        <div class="flip-card-back p-8 border border-gold/40 shadow-inner rounded-3xl items-center text-center">
+                            <h3 class="font-serif text-2xl font-bold text-gold-dark mb-6">Fun Facts Senja</h3>
+                            <ul class="text-xs sm:text-sm text-slate-600 space-y-4 text-left w-full max-w-[220px] mx-auto">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-gold text-base mt-0.5">☕</span>
+                                    <span><strong>Hobi:</strong> Menyeduh Kopi dan bercerita.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-gold text-base mt-0.5">🎨</span>
+                                    <span><strong>Kesan Pertama ke Naila:</strong> Kalem tapi ternyata sangat cerewet.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-gold text-base mt-0.5">⭐</span>
+                                    <span><strong>Hal Favorit:</strong> Senyumannya yang menenangkan.</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="https://instagram.com/" target="_blank" class="mt-8 inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-gold to-amber-600 text-white rounded-full text-xs font-medium hover:scale-105 hover:shadow-lg transition-all">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                                @_rivaldohaay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KARTU NAILA -->
+                <div class="flip-card w-full h-[540px] cursor-pointer group" onclick="toggleFlip(this, event)">
+                    <div class="flip-card-inner shadow-xl shadow-gold/10 rounded-3xl">
+                        <div class="flip-card-front bg-white p-8 border border-gold/20 flex flex-col items-center justify-center space-y-4">
+                            <div class="relative w-48 h-48 sm:w-56 sm:h-56 mx-auto group-hover:scale-105 transition-transform duration-500">
+                                <div class="w-full h-full flex items-center justify-center">
+                                    <img src="assets/images/wanita.png" alt="Foto Naila" class="w-full h-full object-contain drop-shadow-lg" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                                    <svg class="w-full h-full" viewBox="0 0 120 120" fill="none" style="display:none">
+                                        <circle cx="60" cy="60" r="60" fill="#FFF1F2"/>
+                                        <path d="M25 110 C25 80 40 70 60 70 C80 70 95 80 95 110 Z" fill="#D4AF7A"/>
+                                        <path d="M36 50 C36 30 46 25 60 25 C74 25 84 30 84 50 C84 75 74 85 60 85 C46 85 36 75 36 50 Z" fill="#E5C396"/>
+                                        <circle cx="60" cy="52" r="17" fill="#F3C8A8"/>
+                                        <circle cx="53" cy="50" r="2.5" fill="#1E293B"/>
+                                        <circle cx="67" cy="50" r="2.5" fill="#1E293B"/>
+                                        <path d="M55 58 Q60 62 65 58" stroke="#1E293B" stroke-width="2" stroke-linecap="round" fill="none"/>
+                                        <circle cx="42" cy="36" r="4" fill="#FFFFFF"/>
+                                        <circle cx="42" cy="36" r="2" fill="#D4AF7A"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-slate-800">Nailatul Khusna</h3>
+                                <p class="text-xs text-gold-dark font-medium mt-1">Putri dari Bapak Supriyono</p>
+                            </div>
+                            <p class="text-xs text-slate-500 leading-relaxed max-w-xs mx-auto text-center">
+                                Wanita lembut yang siap melengkapi separuh agama dan membangun rumah tangga yang penuh kasih.
+                            </p>
+                            <div class="mt-2 flex items-center gap-1.5 text-[10px] text-slate-400 bg-slate-50 px-3 py-1.5 rounded-full animate-pulse border border-slate-100">
+                                <svg class="w-3 h-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                                <span>Sentuh untuk kenal lebih dekat</span>
+                            </div>
+                        </div>
+
+                        <div class="flip-card-back p-8 border border-gold/40 shadow-inner rounded-3xl items-center text-center">
+                            <h3 class="font-serif text-2xl font-bold text-gold-dark mb-6">Fun Facts Naila</h3>
+                            <ul class="text-xs sm:text-sm text-slate-600 space-y-4 text-left w-full max-w-[220px] mx-auto">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-gold text-base mt-0.5">📚</span>
+                                    <span><strong>Hobi:</strong> Membaca Novel & Memasak.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-gold text-base mt-0.5">😲</span>
+                                    <span><strong>Kesan Pertama ke Senja:</strong> Terlalu kaku, kayak kanebo kering.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-gold text-base mt-0.5">🤍</span>
+                                    <span><strong>Hal Favorit:</strong> Sifat sabarnya yang luar biasa.</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="https://instagram.com/_nail.lla" target="_blank" class="mt-8 inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-gold to-amber-600 text-white rounded-full text-xs font-medium hover:scale-105 hover:shadow-lg transition-all">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                                @_nail.lla
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LINIMASA KISAH CINTA -->
+            <div class="mt-28 max-w-5xl mx-auto relative px-4 z-10">
+                <div class="text-center space-y-3 mb-10">
+                    <h3 class="font-serif text-3xl text-slate-800 font-bold">Kisah Perjalanan Kami</h3>
+                    <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+                    <p class="text-xs sm:text-sm text-slate-500">Geser ke samping untuk membaca perjalanan cinta kami ➔</p>
+                </div>
+
+                <div class="relative">
+                    <div class="flex gap-6 overflow-x-auto pb-6 pt-4 snap-x snap-mandatory scrollbar-thin px-2 scroll-smooth">
+                        
+                        <div class="snap-center min-w-[280px] sm:min-w-[320px] max-w-[340px] bg-white p-6 rounded-3xl border border-gold/20 shadow-lg shadow-gold/5 flex-shrink-0 relative group hover:-translate-y-2 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-2xl bg-amber-100 text-gold-dark font-bold text-sm flex items-center justify-center border border-gold/30 group-hover:bg-gold group-hover:text-white transition-colors duration-300">01</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-base group-hover:text-gold-dark transition-colors">Awal Bertemu</h4>
+                                    <p class="text-[11px] font-semibold text-gold-dark uppercase tracking-wider">Januari 2020</p>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-serif italic">"Berawal dari pertemuan di sebuah komunitas literasi. Obrolan ringan tentang buku perlahan menumbuhkan rasa nyaman di antara kami."</p>
+                        </div>
+
+                        <div class="snap-center min-w-[280px] sm:min-w-[320px] max-w-[340px] bg-white p-6 rounded-3xl border border-gold/20 shadow-lg shadow-gold/5 flex-shrink-0 relative group hover:-translate-y-2 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-2xl bg-amber-100 text-gold-dark font-bold text-sm flex items-center justify-center border border-gold/30 group-hover:bg-gold group-hover:text-white transition-colors duration-300">02</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-base group-hover:text-gold-dark transition-colors">Tumbuh Bersama</h4>
+                                    <p class="text-[11px] font-semibold text-gold-dark uppercase tracking-wider">Maret 2021</p>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-serif italic">"Menghabiskan banyak waktu berdiskusi, berbagi impian, dan belajar saling mendukung dalam setiap proses kehidupan."</p>
+                        </div>
+
+                        <div class="snap-center min-w-[280px] sm:min-w-[320px] max-w-[340px] bg-white p-6 rounded-3xl border border-gold/20 shadow-lg shadow-gold/5 flex-shrink-0 relative group hover:-translate-y-2 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-2xl bg-amber-100 text-gold-dark font-bold text-sm flex items-center justify-center border border-gold/30 group-hover:bg-gold group-hover:text-white transition-colors duration-300">03</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-base group-hover:text-gold-dark transition-colors">Petualangan Bersama</h4>
+                                    <p class="text-[11px] font-semibold text-gold-dark uppercase tracking-wider">Juni 2022</p>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-serif italic">"Menjelajahi keindahan alam Bromo bersama. Di puncak keindahan itu, kami menyadari betapa eratnya ikatan yang telah terbangun."</p>
+                        </div>
+
+                        <div class="snap-center min-w-[280px] sm:min-w-[320px] max-w-[340px] bg-white p-6 rounded-3xl border border-gold/20 shadow-lg shadow-gold/5 flex-shrink-0 relative group hover:-translate-y-2 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-2xl bg-amber-100 text-gold-dark font-bold text-sm flex items-center justify-center border border-gold/30 group-hover:bg-gold group-hover:text-white transition-colors duration-300">04</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-base group-hover:text-gold-dark transition-colors">Komitmen Serius</h4>
+                                    <p class="text-[11px] font-semibold text-gold-dark uppercase tracking-wider">Maret 2024</p>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-serif italic">"Di bawah senja Pantai Balekambang, kami bersepakat untuk mengarahkan hubungan ini ke tahap yang lebih serius dan saling memantaskan diri."</p>
+                        </div>
+
+                        <div class="snap-center min-w-[280px] sm:min-w-[320px] max-w-[340px] bg-white p-6 rounded-3xl border border-gold/20 shadow-lg shadow-gold/5 flex-shrink-0 relative group hover:-translate-y-2 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-2xl bg-amber-100 text-gold-dark font-bold text-sm flex items-center justify-center border border-gold/30 group-hover:bg-gold group-hover:text-white transition-colors duration-300">05</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-base group-hover:text-gold-dark transition-colors">Hari Lamaran</h4>
+                                    <p class="text-[11px] font-semibold text-gold-dark uppercase tracking-wider">Agustus 2026</p>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-serif italic">"Dihadiri oleh keluarga inti yang hangat, kami melangsungkan pertunangan dan menetapkan tanggal baik untuk pernikahan kami."</p>
+                        </div>
+
+                        <div class="snap-center min-w-[280px] sm:min-w-[320px] max-w-[340px] bg-gold/10 p-6 rounded-3xl border border-gold/40 shadow-lg shadow-gold/5 flex-shrink-0 relative group hover:-translate-y-2 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-2xl bg-gold text-white font-bold text-sm flex items-center justify-center border border-gold">06</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-base group-hover:text-gold-dark transition-colors">Menuju Pelaminan</h4>
+                                    <p class="text-[11px] font-semibold text-gold-dark uppercase tracking-wider">Desember 2026</p>
+                                </div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-serif italic">"Dengan restu Allah SWT dan seluruh keluarga, kami bersiap mengikat janji suci pernikahan dan memulai babak baru ikatan cinta."</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COUNTDOWN TIMER -->
+        <section class="relative z-10 py-16 bg-gradient-to-r from-gold/10 via-sky-light/40 to-gold/10 border-y border-gold/20 px-4">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <div class="space-y-2">
+                    <h2 class="font-serif text-2xl sm:text-3xl text-slate-800 font-bold">Menghitung Hari Kebahagiaan</h2>
+                    <p class="text-xs sm:text-sm text-slate-500">22 Desember 2026 — Malang, Jawa Timur</p>
+                </div>
+
+                <div id="countdownContainer" class="grid grid-cols-4 gap-3 sm:gap-6 max-w-lg mx-auto">
+                    <div class="bg-white p-3 sm:p-5 rounded-2xl shadow-md border border-gold/20 text-center">
+                        <span id="cdDays" class="font-serif text-2xl sm:text-4xl font-bold text-slate-800">00</span>
+                        <span class="block text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Hari</span>
+                    </div>
+                    <div class="bg-white p-3 sm:p-5 rounded-2xl shadow-md border border-gold/20 text-center">
+                        <span id="cdHours" class="font-serif text-2xl sm:text-4xl font-bold text-slate-800">00</span>
+                        <span class="block text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Jam</span>
+                    </div>
+                    <div class="bg-white p-3 sm:p-5 rounded-2xl shadow-md border border-gold/20 text-center">
+                        <span id="cdMins" class="font-serif text-2xl sm:text-4xl font-bold text-slate-800">00</span>
+                        <span class="block text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Menit</span>
+                    </div>
+                    <div class="bg-white p-3 sm:p-5 rounded-2xl shadow-md border border-gold/20 text-center">
+                        <span id="cdSecs" class="font-serif text-2xl sm:text-4xl font-bold text-gold-dark">00</span>
+                        <span class="block text-[10px] sm:text-xs text-slate-400 mt-1 uppercase tracking-wider">Detik</span>
+                    </div>
+                </div>
+
+                <div id="passedMessage" class="hidden text-center py-4">
+                    <p class="font-serif text-xl sm:text-2xl text-gold-dark font-bold">Alhamdulillah, kami telah menikah 🤍</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAIL ACARA -->
+        <section id="acara" class="relative z-10 py-20 px-4 max-w-5xl mx-auto">
+            <div class="text-center space-y-3 mb-16">
+                <h2 class="font-serif text-3xl sm:text-4xl text-slate-800 font-bold">Rangkaian Acara</h2>
+                <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+                <p class="text-slate-500 text-sm">Insya Allah acara pernikahan kami akan dilaksanakan pada:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-3xl p-8 border border-gold/30 shadow-lg shadow-gold/5 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 border border-gold/30 rounded-full text-gold-dark text-xs font-semibold">
+                            <span>Akad Nikah</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-800">Selasa, 22 Desember 2026</h3>
+                        <p class="text-sm font-semibold text-slate-600 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Pukul 08.00 WIB - Selesai</span>
+                        </p>
+                        <div class="pt-2 text-xs sm:text-sm text-slate-500 space-y-1">
+                            <p class="font-bold text-slate-700">Masjid Agung Jami Malang</p>
+                            <p>Jl. Merdeka Barat No.3, Kauman, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Masjid+Agung+Jami+Malang" target="_blank" class="flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-medium transition-colors">
+                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            <span>Cari Lokasi</span>
+                        </a>
+                        <button onclick="downloadICS('Akad Nikah Senja & Naila', '2026-12-22T08:00:00+07:00', '2026-12-22T10:00:00+07:00', 'Masjid Agung Jami Malang', 'akad')" class="flex items-center justify-center gap-2 px-4 py-2.5 bg-gold hover:bg-gold-dark text-white rounded-xl text-xs font-medium transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span>Simpan Kalender</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-gold/30 shadow-lg shadow-gold/5 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 border border-gold/30 rounded-full text-gold-dark text-xs font-semibold">
+                            <span>Resepsi Pernikahan</span>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-slate-800">Selasa, 22 Desember 2026</h3>
+                        <p class="text-sm font-semibold text-slate-600 flex items-center gap-2">
+                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Pukul 14.00 WIB - Selesai</span>
+                        </p>
+                        <div class="pt-2 text-xs sm:text-sm text-slate-500 space-y-1">
+                            <p class="font-bold text-slate-700">Gedung Graha Tirta Malang</p>
+                            <p>Jl. Bend. Sengguruh No.32, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gedung+Graha+Tirta+Malang" target="_blank" class="flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-medium transition-colors">
+                            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            <span>Cari Lokasi</span>
+                        </a>
+                        <button onclick="downloadICS('Resepsi Pernikahan Senja & Naila', '2026-12-22T14:00:00+07:00', '2026-12-22T17:00:00+07:00', 'Gedung Graha Tirta Malang', 'resepsi')" class="flex items-center justify-center gap-2 px-4 py-2.5 bg-gold hover:bg-gold-dark text-white rounded-xl text-xs font-medium transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span>Simpan Kalender</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUKU TAMU & DOA -->
+        <section id="bukuTamu" class="relative z-10 py-20 px-4 bg-white/40 backdrop-blur-sm border-t border-gold/20">
+            <div class="max-w-3xl mx-auto space-y-12">
+                <div class="text-center space-y-3">
+                    <h2 class="font-serif text-3xl sm:text-4xl text-slate-800 font-bold">Doa &amp; Ucapan</h2>
+                    <div class="w-12 h-0.5 bg-gold mx-auto"></div>
+                    <p class="text-slate-500 text-sm">Berikan doa dan harapan terbaik Anda untuk kedua mempelai</p>
+                </div>
+
+                <form id="doaForm" onsubmit="handleDoaSubmit(event)" class="bg-white p-6 sm:p-8 rounded-3xl border border-gold/20 shadow-md space-y-5">
+                    <div>
+                        <label for="namaInput" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Nama Anda *</label>
+                        <input type="text" id="namaInput" maxlength="50" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-sm transition-all">
+                        <div class="text-right text-[11px] text-slate-400 mt-1"><span id="namaCharCount">0</span>/50</div>
+                    </div>
+
+                    <div>
+                        <label for="doaInput" class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Doa &amp; Ucapan Restu *</label>
+                        <textarea id="doaInput" rows="4" maxlength="500" required placeholder="Tuliskan ucapan & doa Anda untuk Senja & Naila..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent text-sm transition-all"></textarea>
+                        <div class="text-right text-[11px] text-slate-400 mt-1"><span id="doaCharCount">0</span>/500</div>
+                    </div>
+
+                    <button type="submit" id="btnKirimDoa" class="w-full py-3.5 bg-gradient-to-r from-gold to-amber-600 text-white font-medium text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                        <span>Kirim Doa Restu</span>
+                    </button>
+                </form>
+
+                <div class="space-y-4">
+                    <h3 class="font-serif text-lg font-bold text-slate-800 flex items-center justify-between">
+                        <span>Ucapan Terkirim</span>
+                        <span id="totalDoaBadge" class="text-xs bg-gold/10 text-gold-dark px-2.5 py-1 rounded-full font-sans font-semibold">0 Doa</span>
+                    </h3>
+
+                    <div id="doaList" class="space-y-4"></div>
+
+                    <div class="text-center pt-4">
+                        <button id="btnLihatLainnya" onclick="loadMoreDoa()" class="hidden px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold rounded-full transition-colors">
+                            Lihat Lainnya
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PENUTUP -->
+        <footer class="relative z-10 pt-16 pb-44 px-4 text-center space-y-8 border-t border-gold/10">
+            <div class="max-w-xl mx-auto space-y-4">
+                <svg class="w-8 h-8 text-gold mx-auto opacity-70" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-serif italic px-4">
+                    "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kedua mempelai."
+                </p>
+            </div>
+
+            <div class="space-y-1">
+                <p class="text-xs text-slate-400 uppercase tracking-widest">Kami yang berbahagia,</p>
+                <h3 class="font-serif text-3xl font-bold text-slate-800">Senja &amp; Naila</h3>
+                <p class="text-xs text-slate-500 font-medium">Beserta keluarga besar Bapak Heri Siswanto &amp; Bapak Supriyono</p>
+                <p class="text-xs text-gold-dark font-serif tracking-widest pt-2">22 . 12 . 2026</p>
+            </div>
+
+            <div class="pt-8 flex flex-col items-center gap-4">
+                <button onclick="scrollToTop()" class="inline-flex items-center gap-2 text-xs text-slate-400 hover:text-gold transition-colors">
+                    <span>Kembali ke atas</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+                </button>
+                <p class="text-[10px] text-slate-400">Made with 🤍 for Senja &amp; Naila</p>
+            </div>
+        </footer>
+
+        <!-- TAMAN SURGA -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[720px] aspect-[400/130] pointer-events-none z-[1]" aria-hidden="true">
+            <svg viewBox="0 0 400 130" class="w-full h-full overflow-visible" preserveAspectRatio="xMidYMax meet">
+                <path d="M-900 130V74Q-450 52 -100 70Q80 80 200 66Q330 54 480 72Q900 86 1300 70V130Z" fill="url(#gMid)"/>
+                <use href="#t3" transform="translate(44 84) scale(0.9)"/><use href="#t1" transform="translate(100 80) scale(0.75)"/><use href="#t2" transform="translate(330 80) scale(0.8)"/><use href="#t3" transform="translate(372 84) scale(0.95)"/><use href="#t1" transform="translate(-20 86) scale(1)"/><use href="#t3" transform="translate(430 86) scale(1)"/>
+                <path d="M-900 130V92Q-450 76 -80 88Q80 98 200 88Q330 78 480 94Q900 106 1300 90V130Z" fill="url(#gLawn)"/>
+                <use href="#t1" transform="translate(150 100) scale(0.9)"/><use href="#t3" transform="translate(250 100) scale(0.85)"/>
+                <use href="#fl" transform="translate(48.2 76.9) scale(0.88)" style="color:#F58F7A"/>
+                <use href="#fl" transform="translate(162.7 77.1) scale(1.26)" style="color:#FFD66B"/>
+                <use href="#fl" transform="translate(341.0 77.9) scale(1.21)" style="color:#F58F7A"/>
+                <use href="#fl" transform="translate(207.5 81.1) scale(1.28)" style="color:#FFD66B"/>
+                <use href="#fl" transform="translate(350.0 81.4) scale(0.93)" style="color:#FFD66B"/>
+                <use href="#fl" transform="translate(127.6 84.3) scale(1.21)" style="color:#FFFFFF"/>
+                <use href="#fl" transform="translate(191.0 86.8) scale(0.87)" style="color:#FFB7C5"/>
+                <use href="#fl" transform="translate(186.2 88.2) scale(1.04)" style="color:#C9A4E8"/>
+                <use href="#fl" transform="translate(272.3 88.9) scale(1.07)" style="color:#FFFFFF"/>
+                <use href="#fl" transform="translate(409.3 89.7) scale(0.91)" style="color:#FFFFFF"/>
+                <use href="#fl" transform="translate(410.0 94.2) scale(1.27)" style="color:#FFD66B"/>
+                <use href="#fl" transform="translate(333.5 95.5) scale(0.90)" style="color:#C9A4E8"/>
+                <use href="#fl" transform="translate(315.1 95.8) scale(0.89)" style="color:#FFB7C5"/>
+                <use href="#fl" transform="translate(356.6 95.9) scale(1.13)" style="color:#FFB7C5"/>
+                <use href="#fl" transform="translate(62.0 96.6) scale(1.17)" style="color:#F7A8BC"/>
+                <use href="#fl" transform="translate(37.4 99.3) scale(0.81)" style="color:#C9A4E8"/>
+                <use href="#fl" transform="translate(107.1 104.7) scale(0.85)" style="color:#FFD66B"/>
+                <use href="#fl" transform="translate(9.0 105.7) scale(1.25)" style="color:#FFB7C5"/>
+                <use href="#fl" transform="translate(382.9 105.8) scale(1.21)" style="color:#C9A4E8"/>
+                <use href="#fl" transform="translate(183.1 110.1) scale(0.84)" style="color:#FFFFFF"/>
+                <use href="#fl" transform="translate(200.5 111.2) scale(0.96)" style="color:#C9A4E8"/>
+                <use href="#fl" transform="translate(215.0 112.1) scale(0.96)" style="color:#FFFFFF"/>
+                <use href="#fl" transform="translate(252.1 112.6) scale(1.18)" style="color:#FFFFFF"/>
+                <use href="#fl" transform="translate(-20.2 113.2) scale(1.16)" style="color:#F7A8BC"/>
+                <use href="#fl" transform="translate(123.0 113.2) scale(1.29)" style="color:#F58F7A"/>
+                <use href="#fl" transform="translate(340.8 114.2) scale(1.17)" style="color:#FFFFFF"/>
+                <use href="#fl" transform="translate(26.5 115.8) scale(1.30)" style="color:#F58F7A"/>
+                <use href="#fl" transform="translate(208.5 119.0) scale(0.98)" style="color:#FFFFFF"/>
+                <use href="#fl" transform="translate(163.5 119.6) scale(1.05)" style="color:#C9A4E8"/>
+                <use href="#fl" transform="translate(212.2 120.4) scale(1.02)" style="color:#FFFFFF"/>
+            </svg>
+        </div>
+    </div>
+
+    </main>
+
+    <!-- LOGIKA JAVASCRIPT APLIKASI -->
+    <script src="script.js"></script>
+</body>
+</html>

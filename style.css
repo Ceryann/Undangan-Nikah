@@ -1,0 +1,155 @@
+/* Air terjun di dalam SVG pemandangan */
+.fall-dash { 
+    stroke-dasharray: 14 12; 
+    animation: dashflow 1s linear infinite; 
+}
+.fall-dash2 { 
+    stroke-dasharray: 8 20; 
+    animation: dashflow 1.4s linear infinite; 
+    opacity: .8; 
+}
+@keyframes dashflow { 
+    to { stroke-dashoffset: -26; } 
+}
+.mist { 
+    transform-box: fill-box; 
+    transform-origin: center; 
+    animation: pulseGlow 3.4s ease-in-out infinite; 
+}
+
+/* Latar bawah ayat: kelopak jatuh, sinar, kerlip */
+.petal { 
+    position: absolute; 
+    top: -24px; 
+    width: 12px; 
+    height: 16px; 
+    border-radius: 70% 0 70% 0; 
+    opacity: 0; 
+    animation: petalFall linear infinite; 
+}
+@keyframes petalFall {
+    0% { transform: translate3d(0,-20px,0) rotate(0deg); opacity: 0; }
+    10% { opacity: .85; }
+    90% { opacity: .7; }
+    100% { transform: translate3d(var(--dx,50px),108vh,0) rotate(540deg); opacity: 0; }
+}
+.ray { 
+    animation: rayPulse 7s ease-in-out infinite; 
+}
+@keyframes rayPulse { 
+    0%, 100% { opacity: .35; } 
+    50% { opacity: .9; } 
+}
+
+/* Partikel Cahaya Surga Naik */
+.dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 10px 2px rgba(255, 236, 190, 0.9);
+    animation: rise 9s linear infinite;
+    opacity: 0;
+}
+@keyframes rise {
+    10% { opacity: 0.9; }
+    100% { transform: translateY(-70vh); opacity: 0; }
+}
+
+/* Sparkle & Pulse */
+@keyframes cloudMoveLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-30px); }
+    100% { transform: translateX(0); }
+}
+@keyframes cloudMoveRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(30px); }
+    100% { transform: translateX(0); }
+}
+@keyframes sparklePulse {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+}
+
+.animate-cloud-left { animation: cloudMoveLeft 14s ease-in-out infinite; }
+.animate-cloud-right { animation: cloudMoveRight 18s ease-in-out infinite; }
+.animate-sparkle { animation: sparklePulse 3s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+/* ANIMASI BURUNG TERBANG */
+@keyframes flyBird1 {
+    0% { transform: translate(-10vw, 5vh) scale(0.7); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { transform: translate(110vw, -5vh) scale(0.8); opacity: 0; }
+}
+@keyframes flyBird2 {
+    0% { transform: translate(-15vw, 12vh) scale(0.5); opacity: 0; }
+    15% { opacity: 0.6; }
+    85% { opacity: 0.6; }
+    100% { transform: translate(110vw, 2vh) scale(0.6); opacity: 0; }
+}
+.animate-bird-1 { animation: flyBird1 20s linear infinite; }
+.animate-bird-2 { animation: flyBird2 26s linear infinite 4s; }
+.animate-bird-3 { animation: flyBird2 22s linear infinite 9s; }
+.animate-bird-4 { animation: flyBird1 32s linear infinite 13s; }
+@keyframes flap { 50% { transform: scaleY(.6); } }
+.flap { transform-origin: center; animation: flap .9s ease-in-out infinite; }
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .petal, .ray, .fall-dash, .fall-dash2, .mist, .flap, .animate-bird-3, .animate-bird-4, .dot, .animate-cloud-left, .animate-cloud-right, .animate-sparkle, .animate-pulse-glow, .animate-bird-1, .animate-bird-2 {
+        animation: none !important;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #F5EFE6;
+}
+::-webkit-scrollbar-thumb {
+    background: #D4AF7A;
+    border-radius: 4px;
+}
+
+/* FLIP CARD 3D MEMPELAI */
+.flip-card {
+    perspective: 1000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 1.5rem;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff 0%, #F5EFE6 100%);
+}
