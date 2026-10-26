@@ -2,6 +2,8 @@
 
 Undangan pernikahan digital berbasis **satu file HTML** dengan tema langit & surga: animasi awan, burung terbang, air terjun, kelopak jatuh, dan partikel cahaya. Dilengkapi murottal ayat dengan subtitle yang sinkron, musik latar, hitung mundur, dan buku tamu doa. Tanpa build step, tanpa backend: cukup buka di browser.
 
+🔗 **Demo langsung:** [ceryann.github.io/Undangan-Nikah](https://ceryann.github.io/Undangan-Nikah/)
+
 > Data contoh di repo ini memakai pasangan **Senja & Naila**. Ganti dengan data Anda sendiri (lihat bagian [Kustomisasi](#-kustomisasi)).
 
 ---
@@ -49,19 +51,18 @@ Undangan pernikahan digital berbasis **satu file HTML** dengan tema langit & sur
 
 ## 🚀 Cara Menjalankan
 
-**Lokal**
+**Lokal (dengan Live Server)**
 
 1. Clone repo ini:
    ```bash
-   git clone https://github.com/<username>/<nama-repo>.git
-   cd <nama-repo>
+   git clone https://github.com/Ceryann/Undangan-Nikah.git
+   cd Undangan-Nikah
    ```
 2. Pastikan folder `assets/` sudah berisi audio dan gambar.
-3. Buka `index.html` di browser, atau jalankan server lokal agar audio berjalan mulus:
-   ```bash
-   python -m http.server 8000
-   # lalu buka http://localhost:8000
-   ```
+3. Buka folder proyek di [Visual Studio Code](https://code.visualstudio.com/).
+4. Pasang ekstensi **Live Server** (oleh Ritwick Dey) dari tab *Extensions*.
+5. Klik kanan `index.html` di Explorer, lalu pilih **Open with Live Server**. Alternatifnya, klik tombol **Go Live** di pojok kanan bawah VS Code.
+6. Undangan terbuka otomatis di browser, biasanya di `http://127.0.0.1:5500`, dan halaman ikut *reload* setiap Anda menyimpan perubahan.
 
 Butuh koneksi internet saat pertama dibuka karena Tailwind dan Google Fonts dimuat lewat CDN.
 
@@ -70,7 +71,7 @@ Butuh koneksi internet saat pertama dibuka karena Tailwind dan Google Fonts dimu
 1. Push repo ke GitHub.
 2. Buka **Settings → Pages**.
 3. Pada *Source*, pilih branch `main` dan folder `/ (root)`, lalu **Save**.
-4. Undangan bisa diakses di `https://<username>.github.io/<nama-repo>/`.
+4. Undangan bisa diakses di [https://ceryann.github.io/Undangan-Nikah/](https://ceryann.github.io/Undangan-Nikah/).
 
 Alternatif lain: Netlify, Vercel, atau Cloudflare Pages.
 
@@ -100,10 +101,6 @@ Jika audio murottal Anda berbeda, sesuaikan nilai `time` di `ayatConfig` agar su
 - **Autoplay audio** diizinkan browser hanya setelah interaksi pengguna, itulah sebabnya audio dimulai dari tombol pembuka undangan.
 - **Privasi.** Jika repo ini publik, nama, nama orang tua, lokasi, dan tanggal acara akan terlihat oleh siapa saja. Pertimbangkan repo *private*, atau gunakan data contoh untuk versi publik.
 - **Tailwind via CDN** cocok untuk proyek sederhana ini. Untuk produksi skala besar, sebaiknya gunakan build Tailwind agar lebih ringan.
-
-## 📄 Lisensi
-
-Tentukan lisensi sesuai kebutuhan Anda (misalnya [MIT](https://choosealicense.com/licenses/mit/)). Pastikan audio, foto, dan font yang dipakai memiliki izin penggunaan yang sesuai.
 
 ---
 
